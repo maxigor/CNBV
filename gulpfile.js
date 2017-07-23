@@ -4,8 +4,8 @@ var browserSync = require('browser-sync').create();
 gulp.task('server', function() {
     browserSync.init({
         server: {
-            baseDir: "app"
+            baseDir: "client"
         }
     });
-    gulp.watch('app/**/*').on('change' , browserSync.reload);
+    gulp.watch('client/**/*').on('change' , browserSync.reload);
 });
